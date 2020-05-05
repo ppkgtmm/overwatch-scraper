@@ -1,0 +1,283 @@
+{
+  "stats": [
+    {
+      "name": "Ana",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1875"
+    },
+    {
+      "name": "Ashe",
+      "role": "Offensive",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2000"
+    },
+    {
+      "name": "Baptiste",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1750"
+    },
+    {
+      "name": "Bastion",
+      "role": "Defense",
+      "totalHP": "300",
+      "health": "200",
+      "armor": "100",
+      "sheild": "0",
+      "ultimate_charge": "2062.5"
+    },
+    {
+      "name": "Brigitte",
+      "role": "Support",
+      "totalHP": "250",
+      "health": "200",
+      "armor": "50",
+      "sheild": "0",
+      "ultimate_charge": "2250"
+    },
+    {
+      "name": "D.Va (Mech)",
+      "role": "Tank",
+      "totalHP": "600",
+      "health": "400",
+      "armor": "200",
+      "sheild": "0",
+      "ultimate_charge": "1375"
+    },
+    {
+      "name": "D.Va (Pilot)",
+      "role": "Tank",
+      "totalHP": "150",
+      "health": "150",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "320"
+    },
+    {
+      "name": "Doomfist",
+      "role": "Offense",
+      "totalHP": "250",
+      "health": "250",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Genji",
+      "role": "Offense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Hanzo",
+      "role": "Defense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Junkrat",
+      "role": "Defense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1718.75"
+    },
+    {
+      "name": "Lucio",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2625"
+    },
+    {
+      "name": "McCree",
+      "role": "Offense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Mei",
+      "role": "Defense",
+      "totalHP": "250",
+      "health": "250",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1437.5"
+    },
+    {
+      "name": "Mercy",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1625"
+    },
+    {
+      "name": "Moira",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2125"
+    },
+    {
+      "name": "Orisa",
+      "role": "Tank",
+      "totalHP": "400",
+      "health": "200",
+      "armor": "200",
+      "sheild": "0",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Pharah",
+      "role": "Offense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1875"
+    },
+    {
+      "name": "Reaper",
+      "role": "Offense",
+      "totalHP": "250",
+      "health": "250",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1875"
+    },
+    {
+      "name": "Reinhardt",
+      "role": "Tank",
+      "totalHP": "500",
+      "health": "300",
+      "armor": "200",
+      "sheild": "0",
+      "ultimate_charge": "1375"
+    },
+    {
+      "name": "Roadhog",
+      "role": "Tank",
+      "totalHP": "600",
+      "health": "600",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2000"
+    },
+    {
+      "name": "Soldier:76",
+      "role": "Offense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2062.5"
+    },
+    {
+      "name": "Sombra",
+      "role": "Offense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1250"
+    },
+    {
+      "name": "Symmetra",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "100",
+      "armor": "0",
+      "sheild": "100",
+      "ultimate_charge": "1500"
+    },
+    {
+      "name": "Torbjorn",
+      "role": "Defense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "2125"
+    },
+    {
+      "name": "Tracer",
+      "role": "Offense",
+      "totalHP": "150",
+      "health": "150",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1125"
+    },
+    {
+      "name": "Widowmaker",
+      "role": "Defense",
+      "totalHP": "200",
+      "health": "200",
+      "armor": "0",
+      "sheild": "0",
+      "ultimate_charge": "1375"
+    },
+    {
+      "name": "Winston",
+      "role": "Tank",
+      "totalHP": "500",
+      "health": "400",
+      "armor": "100",
+      "sheild": "0",
+      "ultimate_charge": "1375"
+    },
+    {
+      "name": "Wrecking Ball",
+      "role": "Tank",
+      "totalHP": "600",
+      "health": "500",
+      "armor": "100",
+      "sheild": "0",
+      "ultimate_charge": "1375"
+    },
+    {
+      "name": "Zarya",
+      "role": "Tank",
+      "totalHP": "400",
+      "health": "200",
+      "armor": "0",
+      "sheild": "200",
+      "ultimate_charge": "1875"
+    },
+    {
+      "name": "Zenyatta",
+      "role": "Support",
+      "totalHP": "200",
+      "health": "50",
+      "armor": "0",
+      "sheild": "150",
+      "ultimate_charge": "2062.5"
+    }
+  ]
+}
