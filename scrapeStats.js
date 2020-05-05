@@ -1,26 +1,10 @@
 const fs = require('fs');
-const fetch = require('node-fetch');
 const cheerio = require('cheerio');
-const url = 'https://overwatch.guide/stats/';
+const utils = require('./utils');
 let html = '';
 let data = []
 let $ = '';
 
-async function fetchData()
-{
-   let data = await fetch(url);
-   if(data.status===200 && !data.error){
-       data = await data.text();
-   }
-   else if(data.error){
-        console.log(data.error);
-        data = undefined;
-   }
-   else{
-        data = undefined;
-   }
-   return data;    
-}
 function getFromtable(className,key,isFirst) {
     $('#tablepress-1 > tbody > tr >' + className).each((index, element) =>{
         if(isFirst){
@@ -38,9 +22,11 @@ function getFromtable(className,key,isFirst) {
         }
     });
 }
-async function scrapeStats()
+
+exports.getStats = async function scrapeStats()
 {
-    html = await fetchData();
+    const url = 'https://overwatch.guide/stats/';
+    html = await utils.getHTML(url);
     $ = cheerio.load(html);
     getFromtable('.column-1','name',true);
     getFromtable('.column-2','role',false);
@@ -54,8 +40,6 @@ async function scrapeStats()
     };
     fs.writeFileSync('stats.json', JSON.stringify(stats,null,2));
 }
-
-scrapeStats();
 
 
 
