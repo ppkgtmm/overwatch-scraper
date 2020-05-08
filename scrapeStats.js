@@ -1,4 +1,3 @@
-const fs = require('fs');
 const cheerio = require('cheerio');
 const utils = require('./utils');
 let html = '';
@@ -38,7 +37,7 @@ exports.getStats = async function scrapeStats()
     const stats = {
         stats: data
     };
-    fs.writeFileSync('stats.json', JSON.stringify(stats,null,2));
+    return stats;
 }
 
 
