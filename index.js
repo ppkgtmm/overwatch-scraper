@@ -64,11 +64,14 @@ async function main()
         else if(choice.toLocaleLowerCase().startsWith('B'.toLocaleLowerCase())){
             while(true)
             {
-                let choice = getChoice();
+                choice = getChoice();
                 choice = validateChoice(choice);
-                if(choice!==undefined)
+                if(choice!==undefined && choice !==-1)
                 {
                     console.log('choice');
+                }
+                else if(choice === -1){
+                    break;
                 }
                 readlineSync.keyIn('Press any key to continue...');
             }
@@ -79,8 +82,7 @@ async function main()
             process.exit(1);
         }
         rl.close();
-        process.exit(0);
-    })
-    
+        process.exit(0);    
+    });
 }
 main();
