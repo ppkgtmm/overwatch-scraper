@@ -17,6 +17,26 @@ async function getOptions() {
     return await optionScraper.getOptions();   
 }
 
+function parseOccupation(text) {
+    const pattern = /Occupation:(.*)/
+    const occupation  = text.match(pattern);
+    if(occupation && occupation.length>=2)
+    {
+        return occupation[1].trim();
+    }
+    return null;
+}
+
+function parseBase(text) {
+    const pattern = /Base of Operations:(.*)/
+    const base  = text.match(pattern);
+    if(base && base.length>=2)
+    {
+        return base[1].trim();
+    }
+    return null;
+}
+
 async function scrapeHero(hero) {
     const html = await utils.getHTML(hero[0].link);
     const $ = cheerio.load(html);
@@ -26,6 +46,9 @@ async function scrapeHero(hero) {
     $('.hero-detail-wrapper.m-same-pad').find('.hero-ability').each((index,element) => {
         hero.ability.push($(element).find('.hero-ability-descriptor > .h5').text());
     })
+    hero.occupation = parseOccupation($('.occupation > .hero-bio-copy').text());
+    hero.base = parseBase($('.base > .hero-bio-copy').text());
+    console.log(hero);
     data.push(hero);
 }
 
