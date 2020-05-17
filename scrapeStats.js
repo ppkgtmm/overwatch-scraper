@@ -5,16 +5,19 @@ let html = '';
 let data = []
 let $ = '';
 
-function getFromtable(className,key,isFirst) {
+function getFromtable(className,key,isFirst) 
+{
     $('#tablepress-1 > tbody > tr >' + className).each((index, element) =>{
-        if(isFirst){
+        if(isFirst)
+        {
             
             data.push({ 
                 [key] : $(element).text() 
             });
 
         }
-        else{
+        else
+        {
             if(index<data.length)
             {
                 data[index][key] = $(element).text(); 
@@ -42,7 +45,8 @@ exports.getStats = async function scrapeStats()
         };
         fs.writeFileSync('stats.json', JSON.stringify(stats,null,2));
     }
-    else{
+    else
+    {
         console.log('Unable to scrape data');
     }
 }

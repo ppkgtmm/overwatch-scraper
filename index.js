@@ -39,24 +39,26 @@ function getChoice(){
 
 function validateChoice(choice) {
     if(!isNaN(choice))
-                {
-                    if(choice===-1)
-                    {
-                        return choice;
-                    }
-                    else if(choice<1 || choice>heroes.length)
-                    {
-                        console.log('You have entered invalid integer');
-                        return undefined;
-                    }
-                    else{
-                        return choice;
-                    }
-                }
-                else{
-                    console.log('Please enter an integer');
-                    return undefined;
-                }
+        {
+            if(choice===-1)
+            {
+                return choice;
+            }
+            else if(choice<1 || choice>heroes.length)
+            {
+                console.log('You have entered invalid integer');
+                return undefined;
+            }
+            else
+            {
+                return choice;
+            }
+        }
+    else
+        {
+            console.log('Please enter an integer');
+            return undefined;
+        }
 }
 async function main()
 {
@@ -64,10 +66,12 @@ async function main()
     const menu = 'Welcome!\nWhat would you like to scrape?\nA: stats\nB: heroData';
     console.log(menu);
     rl.on('line', async function(choice){
-        if(choice.toLocaleLowerCase().startsWith('A'.toLocaleLowerCase())){
+        if(choice.toLocaleLowerCase().startsWith('A'.toLocaleLowerCase()))
+        {
             await statsScraper.getStats();
         }
-        else if(choice.toLocaleLowerCase().startsWith('B'.toLocaleLowerCase())){
+        else if(choice.toLocaleLowerCase().startsWith('B'.toLocaleLowerCase()))
+        {
             while(true)
             {
                 choice = getChoice();
@@ -77,13 +81,15 @@ async function main()
                     let hero = heroes.filter(hero =>hero.id === choice);
                     await scrapeHero(hero);
                 }
-                else if(choice === -1){
+                else if(choice === -1)
+                {
                     break;
                 }
                 readlineSync.keyIn('Press any key to continue...');
             }
         }
-        else{
+        else
+        {
             console.log('Invalid option');
             rl.close();
             process.exit(1);

@@ -4,7 +4,8 @@ let html = '';
 let data = []
 let $ = '';
 
-function extractOptions(){
+function extractOptions()
+{
     $('.hero-portrait-detailed').each((index, element)=>{
     
             // console.log($(element).attr('href'));
@@ -16,7 +17,8 @@ function extractOptions(){
             })
     })
 }
-exports.getOptions = async function scrapeOptions() {
+exports.getOptions = async function scrapeOptions() 
+{
     const url  = "https://playoverwatch.com/en-us/heroes";
     html = await utils.getHTML(url);
     // console.log(html);
