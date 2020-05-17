@@ -5,33 +5,25 @@ let html = '';
 let data = []
 let $ = '';
 
-function getFromtable(className,key,isFirst) 
-{
-    $('#tablepress-1 > tbody > tr >' + className).each((index, element) =>{
-        if(isFirst)
-        {
-            
+function getFromtable(className,key,isFirst) {
+  $('#tablepress-1 > tbody > tr >' + className).each((index, element) => {
+        if(isFirst) {
             data.push({ 
                 [key] : $(element).text() 
             });
-
         }
-        else
-        {
-            if(index<data.length)
-            {
+        else {
+            if(index<data.length) {
                 data[index][key] = $(element).text(); 
             }
         }
     });
 }
 
-exports.getStats = async function scrapeStats()
-{
+exports.getStats = async function scrapeStats() {
     const url = 'https://overwatch.guide/stats/';
     html = await utils.getHTML(url);
-    if(html!==undefined && html.length>0)
-    {
+    if(html!==undefined && html.length>0) {
         $ = cheerio.load(html);
         getFromtable('.column-1','name',true);
         getFromtable('.column-2','role',false);
@@ -45,8 +37,7 @@ exports.getStats = async function scrapeStats()
         };
         fs.writeFileSync('stats.json', JSON.stringify(stats,null,2));
     }
-    else
-    {
+    else {
         console.log('Unable to scrape data');
     }
 }

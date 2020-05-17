@@ -4,11 +4,8 @@ let html = '';
 let data = []
 let $ = '';
 
-function extractOptions()
-{
-    $('.hero-portrait-detailed').each((index, element)=>{
-    
-            // console.log($(element).attr('href'));
+function extractOptions() {
+    $('.hero-portrait-detailed').each((index, element)=> {
             data.push({
                 id: index+1,
                 name: $(element).find('.container > .portrait-title').text(),
@@ -17,11 +14,10 @@ function extractOptions()
             })
     })
 }
-exports.getOptions = async function scrapeOptions() 
-{
+
+exports.getOptions = async function scrapeOptions() {
     const url  = "https://playoverwatch.com/en-us/heroes";
     html = await utils.getHTML(url);
-    // console.log(html);
     $ = cheerio.load(html);
     extractOptions()
     return data;  
