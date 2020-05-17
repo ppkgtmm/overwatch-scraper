@@ -37,9 +37,24 @@ function parseBase(text) {
     return null;
 }
 
-async function scrapeHero(hero) {
-    const html = await utils.getHTML(hero[0].link);
+function parseAffiliation(text) {
+    const pattern = /Affiliation:(.*)/
+    const affiliation  = text.match(pattern);
+    if(affiliation && affiliation.length>=2)
+    {
+        return affiliation[1].trim();
+    }
+    return null;
+}
+
+async function scrapeHero(heroData) {
+    heroData = heroData[0];
+    const html = await utils.getHTML(heroData.link);
     const $ = cheerio.load(html);
+    let hero = {};
+    hero.name = heroData.name;
+    hero.image = heroData.imgUrl;
+    hero.link = heroData.link;
     hero.role = $('.h2.hero-detail-role-name').text();
     hero.difficulty = $('.hero-detail-difficulty > span').not('.star.m-empty').length;
     hero.ability = [];
@@ -48,6 +63,7 @@ async function scrapeHero(hero) {
     })
     hero.occupation = parseOccupation($('.occupation > .hero-bio-copy').text());
     hero.base = parseBase($('.base > .hero-bio-copy').text());
+    hero.affiliation = parseAffiliation($('.affiliation > .hero-bio-copy').text());
     console.log(hero);
     data.push(hero);
 }
