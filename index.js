@@ -14,6 +14,7 @@ var rl = readline.createInterface({
 
 let heroes = [];
 let data = [];
+let fetched = [];
 async function getOptions() {
     return await optionScraper.getOptions();   
 }
@@ -50,6 +51,13 @@ function parseAffiliation(text) {
 
 async function scrapeHero(heroData) {
     heroData = heroData[0];
+    if(fetched.indexOf(heroData.id)!=-1)
+    {
+        console.log(`We have already fetched ${heroData.name}`);
+        return;
+    }
+    console.log(`Fetching ${heroData.name}...`);
+    heroes = await getOptions();
     const html = await utils.getHTML(heroData.link);
     const $ = cheerio.load(html);
     let hero = {};
@@ -65,7 +73,8 @@ async function scrapeHero(heroData) {
     hero.occupation = parseOccupation($('.occupation > .hero-bio-copy').text());
     hero.base = parseBase($('.base > .hero-bio-copy').text());
     hero.affiliation = parseAffiliation($('.affiliation > .hero-bio-copy').text());
-    console.log(hero);
+    console.log(`Done fetching ${heroData.name}!`);
+    fetched.push(heroData.id);
     data.push(hero);
 }
 
@@ -97,14 +106,16 @@ function validateChoice(choice) {
 }
 
 async function main() {
-    heroes = await getOptions();
     const menu = 'Welcome!\nWhat would you like to scrape?\nA: stats\nB: heroData';
     console.log(menu);
     rl.on('line', async function(choice) {
         if(choice.toLocaleLowerCase().startsWith('A'.toLocaleLowerCase())) {
+            console.log('Fetching stats...');
             await statsScraper.getStats();
         }
         else if(choice.toLocaleLowerCase().startsWith('B'.toLocaleLowerCase())) {
+            console.log('Fetching heroes available...');
+            heroes = await getOptions();
             while(true) {
                 choice = getChoice();
                 choice = validateChoice(choice);
@@ -118,6 +129,7 @@ async function main() {
                         const scrapedHeroes = {
                             heroes: data
                         };
+                        console.log('Saving heroes...');
                         fs.writeFileSync('heroes.json', JSON.stringify(scrapedHeroes,null,2));
                     }
                     break;

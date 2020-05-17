@@ -1,20 +1,20 @@
 {
   "heroes": [
     {
-      "name": "Ana",
-      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/hero-select-portrait.png",
-      "link": "https://playoverwatch.com/en-us/heroes/ana/",
+      "name": "Zenyatta",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/zenyatta/",
       "role": "Support",
       "difficulty": 3,
       "ability": [
-        "Biotic Rifle",
-        "Sleep Dart",
-        "Biotic Grenade",
-        "Nano Boost"
+        "Orb of Destruction",
+        "Orb of Harmony",
+        "Orb of Discord",
+        "Transcendence"
       ],
-      "occupation": "Bounty Hunter",
-      "base": "Cairo, Egypt",
-      "affiliation": "Overwatch (formerly)"
+      "occupation": "Wandering Guru, Adventurer",
+      "base": "Shambali Monastery, Nepal (formerly)",
+      "affiliation": "The Shambali (formerly)"
     },
     {
       "name": "Ashe",
@@ -50,6 +50,57 @@
       "affiliation": "Caribbean Coalition (formerly), Talon (formerly)"
     },
     {
+      "name": "Genji",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/genji/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/genji/",
+      "role": "Damage",
+      "difficulty": 3,
+      "ability": [
+        "Shuriken",
+        "Deflect",
+        "Swift Strike",
+        "Dragonblade"
+      ],
+      "occupation": "Adventurer",
+      "base": "Shambali Monastery, Nepal",
+      "affiliation": "Shimada Clan (formerly), Overwatch (formerly)"
+    },
+    {
+      "name": "Echo",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/echo/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/echo/",
+      "role": "Damage",
+      "difficulty": 2,
+      "ability": [
+        "Tri-Shot",
+        "Sticky Bombs",
+        "Flight",
+        "Focusing Beam",
+        "Glide",
+        "Duplicate"
+      ],
+      "occupation": "Multirole Adaptive Robot",
+      "base": "Switzerland (formerly)",
+      "affiliation": "Overwatch"
+    },
+    {
+      "name": "Doomfist",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/doomfist/",
+      "role": "Damage",
+      "difficulty": 3,
+      "ability": [
+        "Hand Cannon",
+        "Seismic Slam",
+        "Rising Uppercut",
+        "Rocket Punch ",
+        "Meteor Strike"
+      ],
+      "occupation": "Mercenary",
+      "base": "Oyo, Nigeria",
+      "affiliation": "Talon"
+    },
+    {
       "name": "Bastion",
       "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png",
       "link": "https://playoverwatch.com/en-us/heroes/bastion/",
@@ -67,22 +118,39 @@
       "affiliation": "None"
     },
     {
-      "name": "Brigitte",
-      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/brigitte/hero-select-portrait.png",
-      "link": "https://playoverwatch.com/en-us/heroes/brigitte/",
+      "name": "Ana",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/ana/",
       "role": "Support",
-      "difficulty": 1,
+      "difficulty": 3,
       "ability": [
-        "Rocket Flail",
-        "Repair Pack",
-        "Whip Shot",
-        "Barrier Shield",
-        "Shield Bash",
-        "Rally"
+        "Biotic Rifle",
+        "Sleep Dart",
+        "Biotic Grenade",
+        "Nano Boost"
       ],
-      "occupation": "Mechanical Engineer, Adventurer",
-      "base": "Gothenburg, Sweden (formerly)",
-      "affiliation": "None"
+      "occupation": "Bounty Hunter",
+      "base": "Cairo, Egypt",
+      "affiliation": "Overwatch (formerly)"
+    },
+    {
+      "name": "D.Va",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/dva/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/dva/",
+      "role": "Tank",
+      "difficulty": 2,
+      "ability": [
+        "Fusion Cannons",
+        "Light Gun",
+        "Boosters",
+        "Defense Matrix",
+        "Micro Missiles",
+        "Self-Destruct",
+        "Call Mech"
+      ],
+      "occupation": "Pro Gamer (formerly), Mech Pilot",
+      "base": "Busan, South Korea",
+      "affiliation": "Mobile Exo-Force of the Korean Army"
     }
   ]
 }
