@@ -1,0 +1,88 @@
+{
+  "heroes": [
+    {
+      "name": "Ana",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/ana/",
+      "role": "Support",
+      "difficulty": 3,
+      "ability": [
+        "Biotic Rifle",
+        "Sleep Dart",
+        "Biotic Grenade",
+        "Nano Boost"
+      ],
+      "occupation": "Bounty Hunter",
+      "base": "Cairo, Egypt",
+      "affiliation": "Overwatch (formerly)"
+    },
+    {
+      "name": "Ashe",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/ashe/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/ashe/",
+      "role": "Damage",
+      "difficulty": 2,
+      "ability": [
+        "The Viper",
+        "Dynamite",
+        "Coach Gun",
+        "B.O.B."
+      ],
+      "occupation": "Thief, Gang Leader",
+      "base": "Deadlock Gorge, Arizona, USA",
+      "affiliation": "Deadlock Gang"
+    },
+    {
+      "name": "Baptiste",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/baptiste/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/baptiste/",
+      "role": "Support",
+      "difficulty": 3,
+      "ability": [
+        "Biotic Launcher",
+        "Regenerative Burst",
+        "Immortality Field",
+        "Amplification Matrix",
+        "Exo Boots"
+      ],
+      "occupation": "Combat Medic",
+      "base": "Tortuga, Haiti (formerly)",
+      "affiliation": "Caribbean Coalition (formerly), Talon (formerly)"
+    },
+    {
+      "name": "Bastion",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/bastion/",
+      "role": "Damage",
+      "difficulty": 1,
+      "ability": [
+        "Configuration: Recon",
+        "Configuration: Sentry",
+        "Reconfigure",
+        "Self-Repair",
+        "Configuration: Tank"
+      ],
+      "occupation": "Battle Automaton",
+      "base": "Unknown",
+      "affiliation": "None"
+    },
+    {
+      "name": "Brigitte",
+      "image": "https://d1u1mce87gyfbn.cloudfront.net/hero/brigitte/hero-select-portrait.png",
+      "link": "https://playoverwatch.com/en-us/heroes/brigitte/",
+      "role": "Support",
+      "difficulty": 1,
+      "ability": [
+        "Rocket Flail",
+        "Repair Pack",
+        "Whip Shot",
+        "Barrier Shield",
+        "Shield Bash",
+        "Rally"
+      ],
+      "occupation": "Mechanical Engineer, Adventurer",
+      "base": "Gothenburg, Sweden (formerly)",
+      "affiliation": "None"
+    }
+  ]
+}

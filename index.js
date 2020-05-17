@@ -4,6 +4,7 @@ const utils = require('./utils');
 const cheerio = require('cheerio');
 const readline = require('readline');
 const readlineSync = require('readline-sync');
+const fs = require('fs');
 
 var rl = readline.createInterface({
   input: process.stdin,
@@ -112,6 +113,13 @@ async function main() {
                     await scrapeHero(hero);
                 }
                 else if(choice === -1) {
+                    let respond = readlineSync.question("Do you want to write hero data to file? Y/n\n");
+                    if(respond.toLocaleLowerCase().startsWith('y')) {
+                        const scrapedHeroes = {
+                            heroes: data
+                        };
+                        fs.writeFileSync('heroes.json', JSON.stringify(scrapedHeroes,null,2));
+                    }
                     break;
                 }
                 readlineSync.keyIn('Press any key to continue...');
