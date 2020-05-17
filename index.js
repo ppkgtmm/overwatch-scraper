@@ -11,16 +11,22 @@ var rl = readline.createInterface({
 });
 
 let heroes = [];
+let data = [];
 async function getOptions(){
     return await optionScraper.getOptions();
     
 }
 async function scrapeHero(hero){
-    const html = await utils.getHTML(hero.link);
+    const html = await utils.getHTML(hero[0].link);
     const $ = cheerio.load(html);
     hero.role = $('.h2.hero-detail-role-name').text();
-    
-    return hero;
+    hero.difficulty = $('.hero-detail-difficulty > span').not('.star.m-empty').length
+    hero.ability = [];
+    $('.hero-detail-wrapper.m-same-pad').find('.hero-ability').each((index,element) => {
+        hero.ability.push($(element).find('.hero-ability-descriptor > .h5').text());
+    })
+    console.log(hero.ability);
+    data.push(hero);
 }
 
 function getChoice(){
@@ -68,7 +74,8 @@ async function main()
                 choice = validateChoice(choice);
                 if(choice!==undefined && choice !==-1)
                 {
-                    console.log('choice');
+                    let hero = heroes.filter(hero =>hero.id === choice);
+                    await scrapeHero(hero);
                 }
                 else if(choice === -1){
                     break;
