@@ -17,7 +17,7 @@
     "firebase-admin": "^8.10.0",
     "firebase-functions": "^3.6.1",
     "get-urls": "^9.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "phantom": "^6.3.0",
     "puppeteer": "^1.18.1",
     "readline-sync": "^1.4.10"
